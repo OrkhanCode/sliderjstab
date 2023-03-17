@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+  .all-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke
+  }
+  
+  
+  .body {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .body .buts {
+    display: none;
+  }
+  
+  .body .slider {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .body .slider-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    position: relative;
+    
+  }
+  
+  .body .slider-box i {
+    position: absolute;
+    font-size: 35px;
+    color: white;
+    display: flex;
+    top: 0;
+    align-items: center;
+    z-index: 2 !important;
+    cursor: pointer;
+    height: 100%;
+    width: 8%;
+    justify-content: center;
+  }
+  
+  .body .slider-box i:hover {
+    background-color: rgba(215, 25, 25, 0.034);
+  }
+  
+  .body .slider-box .right {
+    right: 0;
+  }
+  
+  .body .slider-box .left {
+    left: 0;
+    color: white;
+    transform: rotate(180deg);
+  }
+  
+  .body .slider-box .tabs {
+    width: 80%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 1px;
+    z-index: 3;
+    gap: 2%;
+    opacity: 1;
+    transition: all 0.8s;
+  }
+  
+  .body .slider-box .show {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 15px;
+    height: 100px;
+    border-radius: 50px;
+    z-index: 3;
+    height: 50px;
+    }
+  
+  .body .slider-box .show:hover .tabs {
+    opacity: 1;
+  }
+  
+  .body .slider-box .tabs .tab {
+    width: calc(100%/6);
+    /* background-color: rgba(180, 166, 166, 0.671); */
+    background-color: blanchedalmond;
+    height: 6px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+
+  }
+  
+  .body .slider-box .tabs .tab:hover {
+    background-color: white !important;
+  }
+  
+  .active-tab {
+    background-color: white !important;
+  }
+  
+  .body .slider .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    /* transform: translateY(1000px); */
+    transition: all 0.8s;
+    opacity: 0;
+    /* flex: 0 0 auto; */
+  }
+  
+  .active {
+    opacity: 1 !important;
+    /* background-color: red; */
+  }
